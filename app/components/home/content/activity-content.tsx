@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import Heading from "../../common/heading";
 import ActivityCard from "./activity-card";
-import { activityContentData } from "../../../const/activity-content-data";
+import { activityContentData } from "@/app/const/activity-content-data";
 
 const ActivityContent = () => {
   return (

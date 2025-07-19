@@ -1,10 +1,11 @@
-import { Fragment } from "react";
-import { Box, Divider } from "@mui/material";
-import { achievementContentData } from "@/app/const/achievement-data";
-import AchievementCard from "./achievement-card";
+import { Box } from "@mui/material";
 import Heading from "../../common/heading";
+import { getNotionDatabase } from "../../../libs/notion/notionAPI";
+import AchievementToggle from "./achievement-toggle";
 
-const ActivityAchievement = () => {
+const ActivityAchievement = async () => {
+    const notionData = await getNotionDatabase();
+    const sortedData = notionData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   return (
     <Box py={13}>
       <Heading title="活動実績" />
@@ -15,17 +16,7 @@ const ActivityAchievement = () => {
         flexDirection={"column"}
         px={{ xs: 5, md: 20 }}
       >
-        {achievementContentData.map((data) => (
-          <Fragment key={data.src}>
-            <AchievementCard
-              src={`/achieve/${data.src}`}
-              date={data.date}
-              title={data.title}
-              content={data.content}
-            />
-            <Divider sx={{ width: "100%" }} color={"#f7f7f7"} />
-          </Fragment>
-        ))}
+        <AchievementToggle data={sortedData} />
       </Box>
     </Box>
   );
