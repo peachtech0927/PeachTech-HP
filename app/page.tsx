@@ -4,9 +4,8 @@ import ActivityAchievement from "./components/home/achievement/activity-achievem
 import Sponsor from "./components/home/sponsor/sponsor";
 import PeachTechIntroduction from "./components/home/introduction/peachtech-introduction";
 
-// 動的レンダリングを強制
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+// ISRを使用: 60秒ごとに再生成
+export const revalidate = 60;
 
 const HomePage = () => {
   return (

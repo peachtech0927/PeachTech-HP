@@ -3,9 +3,8 @@ import Heading from "../../common/heading";
 import { getNotionDatabase } from "../../../libs/notion/notionAPI";
 import AchievementToggle from "./achievement-toggle";
 
-// 動的レンダリングを強制
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+// ISRを使用: 60秒ごとに再生成
+export const revalidate = 60;
 
 const ActivityAchievement = async () => {
     // 現在時刻をクエリパラメータとして追加してキャッシュを無効化
