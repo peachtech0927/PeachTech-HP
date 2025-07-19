@@ -4,6 +4,10 @@ import ActivityAchievement from "./components/home/achievement/activity-achievem
 import Sponsor from "./components/home/sponsor/sponsor";
 import PeachTechIntroduction from "./components/home/introduction/peachtech-introduction";
 
+// 動的レンダリングを強制
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const HomePage = () => {
   return (
     <>
