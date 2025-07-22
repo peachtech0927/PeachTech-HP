@@ -33,7 +33,7 @@ const Footer = () => {
         <Box display={"flex"} flexDirection={"column"}>
           <FooterTitle>Contact Us</FooterTitle>
           <CustomLink
-            href="/"
+            href="https://docs.google.com/forms/d/1qJVfTkd4eXDsWTbTtEoLYEi2wKTWJZWEWNvDblmEW18"
             rel
             underline="none"
             sx={{
@@ -45,7 +45,7 @@ const Footer = () => {
             参加フォーム
           </CustomLink>
           <CustomLink
-            href="/"
+            href="https://docs.google.com/forms/d/1eeUx8_JXY0yJ-tTBfQ97lH6pilRpcKUMIG51_12wbeo"
             rel
             underline="none"
             sx={{
