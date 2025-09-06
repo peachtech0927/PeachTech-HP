@@ -9,8 +9,8 @@ import Image from "next/image";
 
 const FirstView = () => {
   const images = [
-    "home1.jpg",
-    "home2.png",
+    "home1.webp",
+    "home2.webp",
     "home3.jpg",
     "home4.jpg",
     "home5.jpg",
@@ -24,6 +24,9 @@ const FirstView = () => {
     "home13.jpg",
     "home14.jpg",
     "home15.jpg",
+    "home16.jpg",
+    "home17.jpg",
+    "home18.webp"
   ];
 
   return (
